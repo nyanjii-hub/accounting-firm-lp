@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color: #1f2937;
+  background: #ffffff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+  line-height: 1.7;
+}
+
+section {
+  scroll-margin-top: 88px;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}

@@ -8,8 +8,7 @@
 
 ## Demo
 
-> Vercel公開後にURLを記載してください。  
-> 例: `https://aoba-cpa-lp.vercel.app`
+https://accounting-firm-lp.vercel.app/
 
 ---
 

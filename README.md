@@ -14,12 +14,9 @@ https://accounting-firm-lp.vercel.app/
 
 ## スクリーンショット
 
-> Vercel公開後にキャプチャを追加してください。
-
-| PC ファーストビュー | スマホ CTA |
+| PC ファーストビュー | スマホ ファーストビュー |
 |---|---|
-| ![Uploading image.png…]()
- | （画像を追加） |
+| ![PC](docs/screenshots/PC_001.png) | ![SP](docs/screenshots/SP_001.png) |
 
 ---
 

@@ -18,7 +18,8 @@ https://accounting-firm-lp.vercel.app/
 
 | PC ファーストビュー | スマホ CTA |
 |---|---|
-| （画像を追加） | （画像を追加） |
+| ![Uploading image.png…]()
+ | （画像を追加） |
 
 ---
 

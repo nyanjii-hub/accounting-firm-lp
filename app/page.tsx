@@ -83,6 +83,40 @@ const faqs = [
   },
 ];
 
+const stats = [
+  { value: "42社", label: "顧問先実績" },
+  { value: "18業種", label: "対応業種" },
+  { value: "15年", label: "公認会計士歴" },
+  { value: "98%", label: "顧客継続率" },
+];
+
+const steps = [
+  {
+    step: "01",
+    title: "初回相談（60分）",
+    body: "現在の税務・経理・資金繰りの不安をヒアリング。相談料5,500円（顧問契約時は充当）。",
+  },
+  {
+    step: "02",
+    title: "課題整理とご提案",
+    body: "ヒアリング内容をもとに、最適な支援内容と費用感を分かりやすくご提案します。",
+  },
+  {
+    step: "03",
+    title: "顧問開始",
+    body: "ご契約後すぐに月次支援をスタート。チャット・メール・電話で随時ご相談いただけます。",
+  },
+];
+
+const founder = {
+  name: "青葉 一郎",
+  title: "公認会計士",
+  license: "公認会計士 第XXXXX号",
+  career:
+    "大手監査法人に12年勤務後、独立開業。製造業・IT・小売など多業種の中小企業・スタートアップの経営支援を専門とする。「数字を経営の武器にする」をモットーに、申告業務にとどまらない伴走型支援を提供。",
+  specialties: ["税務顧問", "資金繰り改善", "創業支援", "経営数字の見える化"],
+};
+
 export default function Home() {
   return (
     <main className="bg-white text-aoba-ink">
@@ -146,6 +180,19 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="border-b border-slate-100 bg-white px-4 py-10 sm:px-6">
+        <div className="mx-auto max-w-6xl">
+          <dl className="grid grid-cols-2 gap-8 text-center md:grid-cols-4">
+            {stats.map((stat) => (
+              <div key={stat.label}>
+                <dt className="text-4xl font-bold text-aoba-navy sm:text-5xl">{stat.value}</dt>
+                <dd className="mt-2 text-sm font-semibold text-slate-500">{stat.label}</dd>
+              </div>
+            ))}
+          </dl>
+        </div>
+      </section>
+
       <section id="problems" className="bg-white px-4 py-16 sm:px-6">
         <div className="mx-auto max-w-6xl">
           <SectionTitle eyebrow="Problem" title="このようなお悩みはありませんか" />
@@ -156,6 +203,32 @@ export default function Home() {
                 {problem}
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-aoba-navy px-4 py-16 sm:px-6">
+        <div className="mx-auto max-w-6xl">
+          <p className="text-sm font-bold uppercase tracking-[0.18em] text-aoba-sky">How to Start</p>
+          <h2 className="mt-2 text-3xl font-bold leading-tight text-white sm:text-4xl">
+            3ステップで相談できます
+          </h2>
+          <div className="mt-10 grid gap-6 md:grid-cols-3">
+            {steps.map((step) => (
+              <div key={step.step} className="rounded-md border border-white/20 bg-white/10 p-6">
+                <span className="text-5xl font-bold text-white/25">{step.step}</span>
+                <h3 className="mt-2 text-xl font-bold text-white">{step.title}</h3>
+                <p className="mt-3 text-base text-blue-100">{step.body}</p>
+              </div>
+            ))}
+          </div>
+          <div className="mt-10 text-center">
+            <a
+              href="#contact"
+              className="inline-block rounded-md bg-white px-8 py-3 text-base font-bold text-aoba-navy hover:bg-aoba-sky"
+            >
+              初回相談を申し込む →
+            </a>
           </div>
         </div>
       </section>
@@ -173,6 +246,38 @@ export default function Home() {
                 <p className="mt-3 text-base text-slate-700">{reason.body}</p>
               </article>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-white px-4 py-16 sm:px-6">
+        <div className="mx-auto max-w-6xl">
+          <SectionTitle eyebrow="Representative" title="担当者のご紹介" />
+          <div className="mt-10 flex flex-col items-center gap-8 rounded-md border border-slate-200 bg-aoba-mist p-8 shadow-sm md:flex-row">
+            <div className="flex-shrink-0">
+              <div className="flex h-36 w-36 items-center justify-center rounded-full bg-aoba-sky">
+                <svg className="h-20 w-20 text-aoba-blue/40" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 12c2.761 0 5-2.239 5-5s-2.239-5-5-5-5 2.239-5 5 2.239 5 5 5zm0 2c-3.337 0-10 1.676-10 5v2h20v-2c0-3.324-6.663-5-10-5z" />
+                </svg>
+              </div>
+            </div>
+            <div>
+              <div className="flex flex-wrap items-baseline gap-3">
+                <p className="text-2xl font-bold text-aoba-navy">{founder.name}</p>
+                <span className="rounded-md bg-aoba-sky px-3 py-1 text-sm font-bold text-aoba-blue">
+                  {founder.title}
+                </span>
+              </div>
+              <p className="mt-1 text-sm text-slate-500">{founder.license}</p>
+              <p className="mt-4 text-slate-700">{founder.career}</p>
+              <ul className="mt-4 flex flex-wrap gap-2">
+                {founder.specialties.map((s) => (
+                  <li key={s} className="rounded-md border border-aoba-blue/30 bg-white px-3 py-1 text-sm font-semibold text-aoba-blue">
+                    {s}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </section>
